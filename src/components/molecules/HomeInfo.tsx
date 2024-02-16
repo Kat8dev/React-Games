@@ -2,15 +2,11 @@ import styled from 'styled-components';
 import { colors } from '../../styles';
 
 const HomeInfoStyled = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+
   color: ${colors.hackerGreen};
   .fakeScreen {
     background-color: #151515;
-    min-width: 200px;
-    margin: 0 auto;
+    min-width: 280px;
     padding: 20px;
     border-radius: 5px;
     border: 5px solid ${colors.hackerGreen};
@@ -20,7 +16,9 @@ const HomeInfoStyled = styled.div`
   p {
     text-align: left;
     font-size: 1.25em;
-    font-family: monospace;
+    font-family: monospace;   
+    white-space: nowrap;
+    overflow: hidden;
     width: 0;
   }
 
@@ -188,19 +186,18 @@ const HomeInfoStyled = styled.div`
 
 export default function HomeInfo() {
   return (
-    <HomeInfoStyled>
-     
+    <HomeInfoStyled>    
       <div className="fakeScreen">
         <p className="line1">
-          &#91;&nbsp;&ldquo;Welcome to our Game Center!&rdquo;,
+          &#91;&nbsp;&ldquo;Welcome to my Game Center!&rdquo;,
           <span className="cursor1">_</span>
         </p>
         <p className="line2">
-          &nbsp;&nbsp;&ldquo;Discover fun and easy games for everyone.&rdquo;,
+          &nbsp;&nbsp;&ldquo;Discover fun & easy games&rdquo;,
           <span className="cursor2">_</span>
         </p>
         <p className="line3">
-          &nbsp;&nbsp;&ldquo;Join the fun – let's play together!&rdquo;&nbsp;&#93;
+          &nbsp;&nbsp;&ldquo;Let's play together!&rdquo;&nbsp;&#93;
           <span className="cursor3">_</span>
         </p>
         <p className="line4">
