@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import './App.css'
 import Home from "./page/Home";
-import { MemoryGame, QuizGame } from "./games";
+import { MemoryGame, QuizGame, Witchcraft } from "./games";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/quiz-game",
     element: <QuizGame />,
+  },
+  {
+    path: "/witchcraft",
+    element: <Witchcraft />,
   },
 ]);
 

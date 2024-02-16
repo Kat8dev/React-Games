@@ -44,6 +44,9 @@ export default function Header() {
           <li>
             <NavLink to="/quiz-game">Quiz Game</NavLink>
           </li>
+          <li>
+            <NavLink to="/witchcraft">Witchcraft</NavLink>
+          </li>
         </ul>
       </nav>
     </HeaderStyled>
