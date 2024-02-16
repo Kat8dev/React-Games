@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './memoryGame.css';
 import Modal from '../../components/Modal';
 import data, { Card } from './data';
+import Body from '../../components/layout/Body';
 
 function MemoryGame() {
   const [selectedCards, setSelectedCards] = useState<string[]>([]);
@@ -82,7 +83,7 @@ function MemoryGame() {
   };
 
   return (
-    <>
+    <Body>
       {isGameComplete && (
         <Modal setIsOpen={setGameComplete}>
           <h2>Congratulations! You won!</h2>
@@ -105,7 +106,7 @@ function MemoryGame() {
           })}
         </div>
       </div>
-    </>
+    </Body>
   );
 }
 
