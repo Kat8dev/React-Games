@@ -9,7 +9,7 @@ const HomeInfoStyled = styled.div`
   color: ${colors.hackerGreen};
   .fakeScreen {
     background-color: #151515;
-    width: 400px;
+    min-width: 200px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 5px;
@@ -21,7 +21,6 @@ const HomeInfoStyled = styled.div`
     text-align: left;
     font-size: 1.25em;
     font-family: monospace;
-    white-space: nowrap;
     width: 0;
   }
 

@@ -5,7 +5,9 @@ import WelcomeToQuiz from './welcomeToQuiz/WelcomeToQuiz';
 import QuestionsProvider from './store/QuestionStore';
 import Body from '../../components/layout/Body';
 
-const AppContainer = styled.div``;
+const AppContainer = styled.div`
+background-color: #efe5e5;
+`;
 
 function QuizGame() {
   const [isStarted, setIsStarted] = useState(false);
