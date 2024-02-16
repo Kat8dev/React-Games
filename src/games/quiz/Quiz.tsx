@@ -4,7 +4,11 @@ import { QuizContainer, Restart } from './quizStyled';
 import Timer from './Timer';
 import { QuestionsContext } from './store/QuestionStore';
 
-function Quiz({ restart }) {
+interface QuizProps {
+  restart: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Quiz({ restart }: QuizProps) {
   const [timer, setTimer] = useState(30);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [gameEnd, setGameEnd] = useState({ isEnd: false, text: '' });
@@ -12,7 +16,7 @@ function Quiz({ restart }) {
 
   const { a, b, c, d, question } = questions[questionNumber];
 
-  const handleClick = (response) => {
+  const handleClick = (response: { isCorrect: boolean; }) => {
     if (response.isCorrect && timer !== 0) {
       if (questionNumber < 14) {
         setQuestionNumber(questionNumber + 1);
@@ -43,7 +47,7 @@ function Quiz({ restart }) {
           <Timer
             second={timer}
             setSecond={setTimer}
-            setGameOver={setGameEnd}
+            setGameOver={setGameEnd as React.Dispatch<React.SetStateAction<{ isEnd: boolean; text: string; }>>}
           />
           <QuestionsAnswers
             a={a}

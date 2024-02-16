@@ -16,14 +16,14 @@ const TimerStyled = styled.div`
   color: #006d77;
 `
 
-export default function Timer({second, setSecond, setGameOver, ...rest}) {
+export default function Timer({second, setSecond, setGameOver, ...rest}: {second: number, setSecond: React.Dispatch<React.SetStateAction<number>>, setGameOver:  React.Dispatch<React.SetStateAction<{ isEnd: boolean; text: string; }>>}) {
 
   useEffect(() => {
     if (second >= 0) {
       const interval = setInterval(() => setSecond(second - 1), 1000);
       return () => clearInterval(interval);
     } else {
-      setGameOver(prev => !prev)
+      setGameOver((prev) => ({ ...prev, isEnd: true }));
     }
   }, [second, setSecond, setGameOver]);
 
