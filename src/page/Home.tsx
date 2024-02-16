@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Body from '../components/layout/Body';
-import HomeInfo from '../components/molecules/HomeInfo';
+import {HomeInfo} from '../components/molecules';
 
 const MainStyled = styled.main`
   background-color: #343131;

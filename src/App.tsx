@@ -4,8 +4,7 @@ import {
 } from "react-router-dom";
 import './App.css'
 import Home from "./page/Home";
-import MemoryGame from "./games/memoryGame";
-import QuizGame from './games/quiz';
+import { MemoryGame, QuizGame } from "./games";
 
 const router = createBrowserRouter([
   {
