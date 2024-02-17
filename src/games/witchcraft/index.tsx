@@ -1,6 +1,34 @@
-import styled from 'styled-components';
+import { useEffect, ReactElement } from 'react';
+import Game from './witchcraftGame/core/game';
+
+// import './styles/styles.css'
+import './styles/phaser-styles.css';
+import Body from '../../components/layout/Body';
+
+function Witchcraft(): ReactElement {
+  useEffect(() => {
+    const game = Game();
+
+    return () => {
+      game.destroy(true);
+    };
+  }, []);
+
+  return (
+    <Body>
+      <div className="phaser-container">
+        <div id="phaser" />
+      </div>
+    </Body>
+  );
+}
+
+export default Witchcraft;
+
+/* import styled from 'styled-components';
 import Body from '../../components/layout/Body';
 import Banner2 from './components/Banner2';
+import { Game } from './witchcraftGame/Game';
 
 const WelcomeToWitchcraftStyled = styled.div`
 
@@ -13,9 +41,11 @@ const WelcomeToWitchcraftStyled = styled.div`
 export default function Witchcraft() {
   return (
     <Body> 
-      <WelcomeToWitchcraftStyled>
+       <WelcomeToWitchcraftStyled>
         <Banner2 />
-      </WelcomeToWitchcraftStyled>
+      </WelcomeToWitchcraftStyled> 
+      <Game />
     </Body>
   );
 }
+ */

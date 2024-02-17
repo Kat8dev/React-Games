@@ -1,13 +1,13 @@
-import flamenco from './assets/flamenco.svg';
-import pizza from './assets/pizza.svg';
-import cocktail from './assets/cocktail.svg';
-import palma from './assets/palma.svg';
-import alien from './assets/alien.svg';
-import smoothie from './assets/smoothie.svg';
-import icecream from './assets/icecream.svg';
-import headphones from './assets/headphones.svg';
-import controller from './assets/controller.svg';
-import cake from './assets/cake.svg'; 
+import flamenco from './assets/flamenco.png';
+import pizza from './assets/pizza.png';
+import cocktail from './assets/cocktail.png';
+import palma from './assets/palma.png';
+import alien from './assets/alien.png';
+import smoothie from './assets/smoothie.png';
+import icecream from './assets/icecream.png';
+import headphones from './assets/headphones.png';
+import controller from './assets/controller.png';
+import cake from './assets/cake.png'; 
 
 export interface Card {      
   id: number;
