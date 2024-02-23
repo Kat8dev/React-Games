@@ -3,6 +3,7 @@ import './memoryGame.css';
 import Modal from '../../components/Modal';
 import data, { Card } from './data';
 import Body from '../../components/layout/Body';
+import { Button } from '../../components/atoms';
 
 function MemoryGame() {
   const [selectedCards, setSelectedCards] = useState<string[]>([]);
@@ -87,7 +88,7 @@ function MemoryGame() {
       {isGameComplete && (
         <Modal setIsOpen={setGameComplete}>
           <h2>Congratulations! You won!</h2>
-          <button onClick={restart}>Do you want to play more?</button>
+          <Button onClick={restart}>Do you want to play more?</Button>
         </Modal>
       )}
 

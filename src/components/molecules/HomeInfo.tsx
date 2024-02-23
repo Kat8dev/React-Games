@@ -2,12 +2,11 @@ import styled from 'styled-components';
 import { colors } from '../../styles';
 
 const HomeInfoStyled = styled.div`
-
   color: ${colors.hackerGreen};
   .fakeScreen {
     background-color: #151515;
     min-width: 280px;
-    padding: 20px;
+    padding: 20px 10px;
     border-radius: 5px;
     border: 5px solid ${colors.hackerGreen};
     border-top: 20px solid ${colors.hackerGreen};
@@ -187,6 +186,7 @@ const HomeInfoStyled = styled.div`
 export default function HomeInfo() {
   return (
     <HomeInfoStyled>    
+      
       <div className="fakeScreen">
         <p className="line1">
           &#91;&nbsp;&ldquo;Welcome to my Game Center!&rdquo;,

@@ -1,5 +1,5 @@
 import { useEffect, ReactElement } from 'react';
-import Game from  './witchcraftGame/core/game';
+import Game from  './witchcraftGame/dude/dude';
 
 import './styles/phaser-styles.css';
 import Body from '../../components/layout/Body';

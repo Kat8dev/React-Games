@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const QuizContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 10px 20px;
   .game {
     display: flex;
     flex-direction: column;
